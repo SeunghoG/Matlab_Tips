@@ -1,0 +1,76 @@
+figure(f1);
+    hold on;
+    subplot(2,2,1)
+    plot(wcbuff/wm, risebuff);
+    grid on; box on;
+    title('Rise time with Different $\alpha$','Interpreter','latex','FontSize',14)
+    xlabel('$\omega_n/\omega_m$ [-]','Interpreter','latex','FontSize',14)
+    ylabel('$t_{90}$ [s]','Interpreter','latex','FontSize',14)
+    legend('\alpha = 1','\alpha = 2','\alpha = 3','\alpha = 4','\alpha = 5')
+    xlim([0.1 1])
+    hold on;
+
+    subplot(2,2,2)
+    plot(wcbuff/wm, osbuff);
+    grid on; box on;
+    title('\%OS with Different $\alpha$','Interpreter','latex','FontSize',14)
+    xlabel('$\omega_n/\omega_m$ [-]','Interpreter','latex','FontSize',14)
+    ylabel('\%OS [\%]','Interpreter','latex','FontSize',14)
+    legend('\alpha = 1','\alpha = 2','\alpha = 3','\alpha = 4','\alpha = 5')
+    xlim([0.1 1])
+    hold on;
+
+    subplot(2,2,3)
+    plot(wcbuff/wm, mag2db(gmbuff));
+    grid on; box on;
+    title('Gain Margin with Different $\alpha$','Interpreter','latex','FontSize',14)
+    xlabel('$\omega_n/\omega_m$ [-]','Interpreter','latex','FontSize',14)
+    ylabel('GM [dB]','Interpreter','latex','FontSize',14)
+    legend('\alpha = 1','\alpha = 2','\alpha = 3','\alpha = 4','\alpha = 5')
+    ylim([0 20])
+    xlim([0.1 1])
+    hold on;
+
+    subplot(2,2,4)
+    plot(wcbuff/wm, pmbuff);
+    grid on; box on;
+    title('Phase Margin with Different $\alpha$','Interpreter','latex','FontSize',14)
+    xlabel('$\omega_n/\omega_m$ [-]','Interpreter','latex','FontSize',14)
+    ylabel('PM [deg]','Interpreter','latex','FontSize',14)
+    legend('\alpha = 1','\alpha = 2','\alpha = 3','\alpha = 4','\alpha = 5')
+    xlim([0.1 1])
+      hold on;
+
+
+figure(f2)
+    hold on;
+
+    subplot(2,2,1)
+    plot(wcbuff/wm, disturbbuff);
+        grid on; box on;
+    title('Disturbance Rejection Performance with Different $\alpha$','Interpreter','latex','FontSize',14)
+    xlabel('$\omega_n/\omega_m$ [-]','Interpreter','latex','FontSize',14)
+    ylabel('Magnitude [dB]','Interpreter','latex','FontSize',14)
+    legend('\alpha = 1','\alpha = 2','\alpha = 3','\alpha = 4','\alpha = 5')
+    xlim([0.1 1])
+  
+
+      hold on;
+    subplot(2,2,2)
+    plot(wcbuff/wm, gcbuff);
+        grid on; box on;
+    title('$\omega_{gc}$  with Different $\alpha$','Interpreter','latex','FontSize',14)
+    xlabel('$\omega_n/\omega_m$ [-]','Interpreter','latex','FontSize',14)
+    ylabel('$\omega_{gc}$ [rad/s]','Interpreter','latex','FontSize',14)
+    legend('\alpha = 1','\alpha = 2','\alpha = 3','\alpha = 4','\alpha = 5')
+    xlim([0.1 1])
+
+      hold on;
+    subplot(2,2,3)
+    plot(wcbuff/wm, pcbuff);
+        grid on; box on;
+    title('$\omega_{pc}$  with Different $\alpha$','Interpreter','latex','FontSize',14)
+    xlabel('$\omega_n/\omega_m$ [-]','Interpreter','latex','FontSize',14)
+    ylabel('$\omega_{pc}$ [rad/s]','Interpreter','latex','FontSize',14)
+    legend('\alpha = 1','\alpha = 2','\alpha = 3','\alpha = 4','\alpha = 5')
+    xlim([0.1 1])
