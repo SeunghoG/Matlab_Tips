@@ -1,4 +1,4 @@
-figure(f1);
+    figure(f1);
     hold on;
     subplot(2,2,1)
     plot(wcbuff/wm, risebuff);
